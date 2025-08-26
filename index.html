@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jagruti Rangoli Shop — Handcrafted Rangoli Designs</title>
+  <meta name="description" content="Beautiful handcrafted rangoli designs for festivals, events and home décor. Buy original rangoli art from local artist." />
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>
+          <!-- simple Rangoli-like SVG -->
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="20" fill="#fff4ee" stroke="#f2b07f" stroke-width="1"/>
+            <path d="M24 10 L28 20 L38 22 L30 28 L32 38 L24 32 L16 38 L18 28 L10 22 L20 20 Z" fill="#ff7a2d" opacity="0.95" />
+          </svg>
+        </div>
+        <div>
+          <h1>Rangoli Shop</h1>
+          <div class="muted">Handcrafted rangoli designs — ready to buy</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#gallery">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="pill cart-btn" id="open-cart" aria-label="Open cart">Cart <span id="cartCount" class="cart-count" style="display:none">0</span></button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h2>Beautiful Rangoli — Made with love</h2>
+        <p>Choose from traditional, modern and customized rangoli designs for festivals, weddings or home décor. Each piece is made by hand and ready to display.</p>
+        <div style="display:flex;gap:8px;align-items:center">
+          <a class="btn" href="#gallery">Browse designs</a>
+          <div class="muted" style="margin-left:auto">Free local delivery on orders ₹999+</div>
+        </div>
+
+        <div class="divider"></div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div>
+            <strong>Custom Orders</strong>
+            <div class="muted">Want your name or a design? We'll make it.</div>
+          </div>
+          <div style="margin-left:auto">
+            <a class="pill" href="#contact">Request a custom rangoli</a>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="hero-card" style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div style="width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#fff9f3,#fff);display:grid;place-items:center">🎨</div>
+            <div>
+              <div style="font-weight:700">Authentic</div>
+              <div class="muted">Local artist, handmade</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;align-items:center">
+            <div style="width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#fff9f3,#fff);display:grid;place-items:center">🚚</div>
+            <div>
+              <div style="font-weight:700">Fast Delivery</div>
+              <div class="muted">Within 5-7 business days</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;align-items:center">
+            <div style="width:64px;height:64px;border-radius:12px;background:linear-gradient(180deg,#fff9f3,#fff);display:grid;place-items:center">💝</div>
+            <div>
+              <div style="font-weight:700">Gift-ready</div>
+              <div class="muted">Beautiful packaging available</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="gallery">
+      <div class="controls">
+        <div class="search"><input id="searchInput" placeholder="Search designs, e.g. "Floral", "Diwali"" /></div>
+        <select id="categoryFilter" style="padding:10px;border-radius:10px;border:1px solid #eee">
+          <option value="all">All categories</option>
+          <option value="traditional">Traditional</option>
+          <option value="modern">Modern</option>
+          <option value="custom">Custom</option>
+        </select>
+      </div>
+
+      <div id="productsGrid" class="grid"></div>
+    </section>
+
+    <section id="about" style="margin-top:28px">
+      <div class="hero-card">
+        <h3>About the Artist</h3>
+        <p class="muted">Our artist has been creating rangoli for over 15 years — blending traditional motifs with modern colours. Each piece is made using eco-friendly pigments and can be ordered in different sizes.</p>
+        <ul class="muted">
+          <li>Sizes: Small (A4), Medium (A3), Large (A2)</li>
+          <li>Custom color palette available</li>
+          <li>Bulk / event orders welcome</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <div class="hero-card">
+        <h3>Contact & Custom Orders</h3>
+        <form id="contactForm">
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <input name="name" placeholder="Your name" required style="flex:1;padding:10px;border-radius:10px;border:1px solid #eee" />
+            <input name="email" placeholder="Email" required style="flex:1;padding:10px;border-radius:10px;border:1px solid #eee" />
+          </div>
+          <div style="margin-top:8px">
+            <textarea name="message" placeholder="Tell us about size, colours, date, or special request" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #eee;min-height:110px"></textarea>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+            <button class="btn" type="submit">Send request</button>
+            <div class="muted">Or email: <a href="mailto:rangoli@example.com">rangoli@example.com</a></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Rangoli Shop — handcrafted rangoli designs • Designed with ❤️
+    </footer>
+  </div>
+
+  <!-- Modal (product detail) -->
+  <div id="modal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-card" role="document">
+      <div>
+        <div class="large" id="modalImage"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <h3 id="modalTitle"></h3>
+        <div class="muted" id="modalCategory"></div>
+        <div id="modalDesc" class="muted"></div>
+        <div style="font-size:20px;color:var(--accent);font-weight:700" id="modalPrice"></div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <label>Qty:</label>
+          <input id="modalQty" type="number" value="1" min="1" style="width:80px;padding:8px;border-radius:8px;border:1px solid #eee" />
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:auto">
+          <button id="addToCart" class="btn">Add to cart</button>
+          <button id="closeModal" class="btn" style="background:#eee;color:#222">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart panel (hidden until opened) -->
+  <div id="cartPanel" class="cart-panel" style="display:none">
+    <h4>Your Cart</h4>
+    <div id="cartItems" style="min-height:80px"></div>
+    <div class="divider"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="muted">Total</div>
+      <div style="font-weight:700" id="cartTotal">₹0</div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button id="checkout" class="btn">Checkout</button>
+      <button id="closeCart" class="btn" style="background:#eee;color:#222">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
